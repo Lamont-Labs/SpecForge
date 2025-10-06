@@ -1,0 +1,9 @@
+# FILE: dist/example_outputs/SPEC.yaml
+SpecForgeVersion: v2.0
+Idea: Folding Solar Charger
+IdeaHash: "demo-hash"
+FunctionalRequirements:
+  - Deterministic mapping
+  - No placeholders
+DFMA_Score: 88
+Sustainability: "Recyclable materials suggested"
