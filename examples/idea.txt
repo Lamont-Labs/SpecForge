@@ -1,0 +1,2 @@
+# FILE: examples/idea.txt
+A compact solar charger that folds into a portable panel with a USB-C output.
