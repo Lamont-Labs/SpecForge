@@ -1,0 +1,6 @@
+# FILE: requirements.txt
+typer==0.12.3
+pyyaml==6.0.1
+cyclonedx-python-lib==4.0.1
+hashlib==0.0.1
+jinja2==3.1.3
