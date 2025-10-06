@@ -1,6 +1,6 @@
 # FILE: requirements.txt
-# SpecForge — Deterministic Demo Dependencies
-# Safe list only; hashlib removed (built into Python)
+# SpecForge — Deterministic Demo Dependencies (Fixed)
+# hashlib removed (it's part of Python standard library)
 
 typer==0.12.3
 pyyaml==6.0.1
