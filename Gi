@@ -1,0 +1,58 @@
+# File: .github/workflows/ci.yml
+name: Demo CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies (clean)
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          pip cache purge || true
+          if [ -f requirements.txt ]; then
+            # Ensure no stdlib packages are listed (e.g., hashlib)
+            sed -i '/^hashlib\b.*/Id' requirements.txt || true
+            python -m pip install -r requirements.txt
+          else
+            echo "No requirements.txt found; skipping."
+          fi
+
+      - name: Run demo via Makefile
+        if: ${{ hashFiles('Makefile') != '' }}
+        run: make demo
+
+      - name: Run verify script
+        if: ${{ hashFiles('verify.sh') != '' }}
+        run: bash verify.sh
+
+      - name: Upload dist artifacts (if any)
+        if: ${{ hashFiles('dist/**') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+```0
