@@ -1,0 +1,10 @@
+# FILE: SBOM/sbom.cdx.json
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "components": [
+    {"name": "specforge-core", "type": "library", "version": "1.0"},
+    {"name": "typer", "type": "library", "version": "0.12.3"}
+  ]
+}
