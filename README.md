@@ -24,3 +24,4 @@ See [docs/QUICKSTART.md](docs/QUICKSTART.md)
 
 ## License
 MIT-style demo license © 2025 Jesse J. Lamont
+[![SpecForge Demo CI](https://github.com/Lamont-Labs/SpecForge/actions/workflows/ci.yml/badge.svg)](https://github.com/Lamont-Labs/SpecForge/actions/workflows/ci.yml)
