@@ -1,0 +1,2 @@
+# FILE: dist/example_outputs/SBOM.json
+{"components": [{"name": "mapper"}, {"name": "sbom_generator"}]}
