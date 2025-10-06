@@ -1,34 +1,27 @@
 name: Demo CI
-
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install deps (best-effort)
         run: |
           if [ -f requirements.txt ]; then
             python -m pip install --upgrade pip
             pip install -r requirements.txt || true
           fi
-
-      - name: Run demo if Makefile + target exist
+      - name: Run demo if Makefile+target exist
         run: |
           if [ -f Makefile ] && grep -qE '^[[:space:]]*demo:' Makefile; then
             make demo || (echo "Demo failed"; exit 1)
           else
-            echo "No Makefile demo target found; skipping."
+            echo "No Makefile demo target; skipping."
           fi
