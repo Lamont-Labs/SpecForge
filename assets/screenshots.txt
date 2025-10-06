@@ -1,0 +1,2 @@
+# FILE: assets/screenshots.txt
+(Placeholder paths for demo screenshots — generated later)
