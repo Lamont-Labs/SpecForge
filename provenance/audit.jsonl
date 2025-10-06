@@ -1,0 +1,2 @@
+# FILE: provenance/audit.jsonl
+{"time":"2025-10-05T00:00Z","event":"demo_run","status":"ok"}
