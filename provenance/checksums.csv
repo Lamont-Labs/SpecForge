@@ -1,0 +1,4 @@
+# FILE: provenance/checksums.csv
+sha256,SPEC.yaml
+sha256,SBOM.json
+sha256,PATENT_DRAFT.md
