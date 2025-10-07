@@ -1,7 +1,7 @@
 # FILE: README.md
 # SpecForge™ — Deterministic Invention Mapping with SBOMs and Attorney-Ready Handoffs
 Version: v2.0 • Date: 2025-10-05 • Owner: Jesse J. Lamont
-
+[![SpecForge Demo CI](https://github.com/Lamont-Labs/SpecForge/actions/workflows/ci.yml/badge.svg)](https://github.com/Lamont-Labs/SpecForge/actions/workflows/ci.yml)
 SpecForge™ converts invention ideas into reproducible SPECs, SBOMs, and provisional-style patent scaffolds.
 This repository is a **demo-only**, fully deterministic showcase with provenance, reproducibility proof, and handoff packaging.
 
@@ -24,4 +24,4 @@ See [docs/QUICKSTART.md](docs/QUICKSTART.md)
 
 ## License
 MIT-style demo license © 2025 Jesse J. Lamont
-[![SpecForge Demo CI](https://github.com/Lamont-Labs/SpecForge/actions/workflows/ci.yml/badge.svg)](https://github.com/Lamont-Labs/SpecForge/actions/workflows/ci.yml)
+
